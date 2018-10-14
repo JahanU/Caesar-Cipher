@@ -1,0 +1,23 @@
+h1 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+label {
+    padding: 5px 0px;
+}
+
+#btnEncrypt {
+    margin: 15px 0px 0px 16px;
+}
+
+#btnDecrypt {
+    margin: 15px 0px 10px 0px;
+}
+
+footer {
+    padding: 5px;
+}
