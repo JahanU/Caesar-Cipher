@@ -42,7 +42,7 @@ function decryptMessage() {
 
 
     for (var i = 0; i < 26; i++) { // i is referring to the amount of shifts that will take place
-        var decyptedM = ""; // decrypted message will be stored here
+        var decryptedM = ""; // decrypted message will be stored here
 
         for (var y = 0; y < getEncryptedM.length; y++) {
             var ch = getEncryptedM.charAt(y);
@@ -59,12 +59,12 @@ function decryptMessage() {
                     ch = ch + 26;
                 }
 
-                decyptedM += CHR(ch);
+                decryptedM += CHR(ch);
                 getLetterFreq[getEncryptedM[y].charCodeAt(0)-"a".charCodeAt(0)]++;
                 console.log(222, getLetterFreq.slice(0));
 
             }
-             else {
+            else {
 
                 if (ch.charCodeAt(0) >= "A".charCodeAt(0) && ch.charCodeAt(0) <= "Z".charCodeAt(0)) {
                     ch = (ch.charCodeAt(0) - i);
@@ -73,15 +73,15 @@ function decryptMessage() {
                         ch = ch + 26;
                     }
                     
-                decyptedM += CHR(ch);
-               getLetterFreq[getEncryptedM[y].charCodeAt(0)-"A".charCodeAt(0)]++;
-               console.log(333, getLetterFreq.slice(0));
+                    decryptedM += CHR(ch);
+            getLetterFreq[getEncryptedM[y].charCodeAt(0)-"A".charCodeAt(0)]++;
+            console.log(333, getLetterFreq.slice(0));
                 }
             }
 
         } // end message/char.at() for loop
 
-        shiftedCiphers[i] = decyptedM;
+        shiftedCiphers[i] = decryptedM;
 
     } // end shift for loop
 
